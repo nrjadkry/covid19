@@ -84,7 +84,7 @@ def home(request):
 
 	d=data1[25]
 
-	print(d)
+	# print(d)
 
 
 	# print(data)
@@ -99,7 +99,8 @@ def home(request):
 
 		newsdata={
 		'title':d['title'],
-		'summary':d['summary']
+		'summary':d['summary'],
+		'url':d['url']
 
 		}
 		allnews.append(newsdata)
