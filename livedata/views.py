@@ -75,6 +75,41 @@ def home(request):
 
 
 
+	url5 = "https://nepalcorona.info/api/v1/news"
+
+
+	response = requests.request("GET", url5).json()
+
+	data1=response['data']
+
+	d=data1[25]
+
+	print(d)
+
+
+	# print(data)
+
+	allnews=[]
+
+	# countNews=d.count()
+
+	for news in range(25):
+		d=data1[news]
+
+
+		newsdata={
+		'title':d['title'],
+		'summary':d['summary']
+
+		}
+		allnews.append(newsdata)
+
+	# print(allnews)
+
+
+
+
+
 	context={
 	'data':lst,
 	'country':cov['country'],
@@ -83,7 +118,8 @@ def home(request):
 	'deaths': cov['deaths']['total'],
 	'new': cov['cases']['new'],
 	'serious': cov['cases']['critical'],
-	'today':today
+	'today':today,
+	'allnews':allnews
 	}
 
 
@@ -121,6 +157,9 @@ class ChartData(APIView):
 				# data=response['response']
 
 				# print(data[0])
+
+
+
 
 
 
