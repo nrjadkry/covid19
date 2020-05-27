@@ -44,33 +44,7 @@
 
 <div class="container">
 	<div class="row">
-      <div class="col-lg-5 scroll">
-         <div class="card card-body">
-            <a class="btn btn-primary  btn-sm btn-block" href="">Covid19 Data by countries</a>
-            <table class="table table-sm">
-               <tr>
-                  <th>Countries</th>
-                  <th>Total Cases</th>
-                  <th>Deaths</th>
-               </tr>
 
-                      {% for d in data%}
-                  <tr>
-                    
-                     <td>{{d.country}}</td>
-                     <td>{{d.all}}</td>
-                     <td>{{d.deaths}}</td>
-
-                     
-                  </tr>      
-                     {% endfor %}
-
-                
-
-            </table>
-          </div>
-
-      </div>
       <div class="col-lg-7">
 		<div class="row justify-content-md-center">
 
@@ -388,7 +362,7 @@
                       <div class="icon-o"><i class="lni-users"></i></div>
                       <div class="fact-count">
                         <h2><span class="counter"> <b>{{ new }}</b> </span></h2>
-                        <h3>New Cases</h3>
+                        <h3>ew Cases</h3>
                       </div>
                     </div>
                   </div>
@@ -410,10 +384,37 @@
           </section>
       
    </div>
-	<br>
+	
 
 	
    </div>
+         <div class="col-lg-5 scroll">
+         <div class="card card-body">
+            <a class="btn btn-primary  btn-sm btn-block" href="">Covid19 Data by countries</a>
+            <table class="table table-sm">
+               <tr>
+                  <th>Countries</th>
+                  <th>Total Cases</th>
+                  <th>Deaths</th>
+               </tr>
+
+                      {% for d in data%}
+                  <tr>
+                    
+                     <td>{{d.country}}</td>
+                     <td>{{d.all}}</td>
+                     <td>{{d.deaths}}</td>
+
+                     
+                  </tr>      
+                     {% endfor %}
+
+                
+
+            </table>
+          </div>
+
+      </div>
  </div>
          
 <script>
